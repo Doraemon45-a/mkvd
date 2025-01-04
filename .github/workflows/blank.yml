@@ -27,11 +27,11 @@ jobs:
 
     - name: Download MKV file
       run: |
-        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/Titanic.1997.REMASTERED.HQ.1080p.BluRay.x265.DD_5.1-Pahe.in.mkv"
+        curl -L -o video.mkv "https://sxtcp.tg-index.workers.dev/0:/Solo.Leveling.S01E13.You.arent.E-rank.are.You.1080p.NF.WEB-DL.AAC2.0.H.264-KQRM.mkv"
 
     - name: Convert MKV to MP4
       run: |
-        ffmpeg -i video.mkv -vf "crop=1920:818:0:140,scale=1920:1080,subtitles=video.mkv:si=13" -r 24 -c:v libx264 -preset fast -crf 24 -c:a aac -b:a 160k -ac 2 -af "volume=2.0" -movflags +faststart video.mp4
+        ffmpeg -i video.mkv -vf "crop=1920:818:0:140,scale=1920:1080,subtitles=video.mkv:si=1" -t 95 -an video.mp4
 
 
 
