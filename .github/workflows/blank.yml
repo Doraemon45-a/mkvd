@@ -27,7 +27,7 @@ jobs:
 
     - name: Download MKV file
       run: |
-        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/TheGdriveXbot/The.Trauma.Code.Heroes.on.Call/The.Trauma.Code.Heroes.on.Call.S01E03.Keep.On.Running.1080p.NF.WEB-DL.DUAL.DDP5.1.H.264-EQRTZ.mkv"
+        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/TheGdriveXbot/The.Trauma.Code.Heroes.on.Call/The.Trauma.Code.Heroes.on.Call.S01E07.SOS.from.South.Sudan.1080p.NF.WEB-DL.DUAL.DDP5.1.H.264-EQRTZ.mkv"
 
     - name: Convert MKV to MP4
       run: |
