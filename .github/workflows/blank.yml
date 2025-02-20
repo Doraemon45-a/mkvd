@@ -27,13 +27,11 @@ jobs:
 
     - name: Download MKV file
       run: |
-        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/TheGdriveXbot/The.Trauma.Code.Heroes.on.Call/The.Trauma.Code.Heroes.on.Call.S01E07.SOS.from.South.Sudan.1080p.NF.WEB-DL.DUAL.DDP5.1.H.264-EQRTZ.mkv"
+        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/TheGdriveXbot/Tenggelamnya.Kapal.Van.Der.Wijck.2013.1080p.HS.WEB-DL.AAC2.0.H.264-SEIKEL.mkv"
 
     - name: Convert MKV to MP4
       run: |
-        ffmpeg -i video.mkv -vf "scale=1280:720,subtitles=video.mkv:si=23" -r 24 -c:v libx264 -preset veryfast -crf 22 -c:a aac -b:a 160k -ac 2 -af "volume=3.0" -movflags +faststart video.mp4
-
-
+        ffmpeg -i video.mkv -vf "crop=1920:818:0:140,scale=1920:1080,subtitles=video.mkv:si=1:force_style='Fontsize=18'" -r 24 -c:v libx264 -preset veryfast -crf 24 -c:a aac -b:a 160k -ac 2 -af "volume=2.5" -movflags +faststart video.mp4
 
     - name: Upload to Google Drive
       run: python3 upload_to_gdrive.py video.mp4
