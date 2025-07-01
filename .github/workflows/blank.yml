@@ -27,7 +27,7 @@ jobs:
 
     - name: Download MKV file
       run: |
-        curl -L -o video.mkv "https://tipistream.tipikuy.workers.dev/0:/series/Gannibal.S01/Gannibal.S01E06.Premonition.720p.WEB-DL.x265.10Bit-Pahe.in.mkv"
+        curl -L -o video.mkv "https://tipigd.tipikug.workers.dev/0:/movieb/Grave%20of%20the%20Fireflies%201988%201080p%20BluRay%20x264%20DD2.0-Pahe.in.mkv"
 
     - name: List files for debugging
       run: ls -lh
